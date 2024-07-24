@@ -1,1 +1,26 @@
+（1） 获取字典键值方法：
+  1、*dict
+  2、*dict.keys()
+     dict.keys()：返回指向键的迭代器
 
+（2）Json 数据格式 即是具有一定格式的字符串数据
+
+（3）得到CSV文件实例
+import pandas as pd 
+   
+# 三个字段 name, site, age
+nme = ["Google", "Runoob", "Taobao", "Wiki"]
+st = ["www.google.com", "www.runoob.com", "www.taobao.com", "www.wikipedia.org"]
+ag = [90, 40, 80, 98]
+   
+# 字典
+dict = {'name': nme, 'site': st, 'age': ag} 
+     
+df = pd.DataFrame(dict)
+  
+# 保存 dataframe
+df.to_csv('site.csv')
+
+（4）
+simplejson.loads(): json to python
+simplejson.dumps(): python to json
